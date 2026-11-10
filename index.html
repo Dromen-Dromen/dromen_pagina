@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dromen | Colecciona. Disfruta. Conecta.</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container navbar">
+        <a href="index.html" class="logo-link">
+          <img
+            src="https://i.ibb.co/8DBVQZxs/Adobe-Express-Dromenv2-3-ezgif-com-effects.gif"
+            alt="Dromen"
+            class="logo"
+          />
+        </a>
+
+        <input type="checkbox" id="menuToggle" class="menu-toggle" />
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="marca.html">La marca</a></li>
+            <li><a href="cultura.html">Cultura</a></li>
+            <li><a href="redes.html">Redes</a></li>
+          </ul>
+        </nav>
+
+        <label for="menuToggle" class="menu-button">☰</label>
+      </div>
+    </header>
+
+    <!-- Chat bot -->
+
+    <script
+      type="module"
+      src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs"
+    ></script>
+    <script type="module">
+      var myLandbot = new Landbot.Livechat({
+        configUrl:
+          "https://storage.googleapis.com/landbot.online/v3/H-3544602-EYLBR7ZS52UK5VN0/index.json",
+      });
+    </script>
+
+    <!-- =========================
+       INICIO
+       ========================= -->
+
+    <main id="inicio">
+      <!-- HERO -->
+
+      <section class="hero-section" style="background: var(--secondary)">
+        <div class="container hero">
+          <div class="hero-content reveal">
+            <span class="hero-label"> ● Tienda geek / Colombia </span>
+
+            <h1>
+              Colecciona.<br />
+              <span>Disfruta.</span><br />
+              Conecta.
+            </h1>
+
+            <p>
+              Objetos para quienes no solo miran historias: las llevan consigo,
+              las comparten y las convierten en parte de su identidad.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="tienda.html" class="btn"> Entrar a la tienda → </a>
+
+              <a href="cultura.html" class="btn btn-outline">
+                Conocer Dromen ↘
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-image-container reveal reveal-delay-2">
+            <img
+              src="https://i.ibb.co/N6tBK0zy/AAnimaci-n-3.gif"
+              alt="Colección de figuras de anime"
+              class="about-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- FRASE -->
+
+      <div class="container" style="padding: 20px 0">
+        <div
+          class="text-muted"
+          style="
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+          "
+        >
+          <span>Colecciona. Disfruta. Conecta.</span>
+
+          <span> Anime / cine / snacks / figuras </span>
+        </div>
+      </div>
+
+      <!-- CATEGORÍAS -->
+
+      <section>
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> Todo lo que te mueve </span>
+
+            <h2 class="section-title">
+              Diseña tu entorno <span class="text-purple">a tu manera.</span>
+            </h2>
+
+            <p class="section-description">
+              Encuentra objetos, personajes y sabores que representen aquello
+              que te gusta.
+            </p>
+          </div>
+
+          <div class="brand-grid">
+            <a href="#tienda" class="brand-card">
+              <div class="brand-icon">◇</div>
+
+              <h3>Figuras & estatuillas</h3>
+
+              <p style="color: #efe5d5">
+                Personajes y piezas para tu colección.
+              </p>
+            </a>
+
+            <a href="#tienda" class="brand-card">
+              <div class="brand-icon">✦</div>
+              <h3>Anime & manga</h3>
+
+              <p style="color: #efe5d5">Tus mundos favoritos, más cerca.</p>
+            </a>
+
+            <a href="#tienda" class="brand-card">
+              <div class="brand-icon">☕</div>
+
+              <h3>Snacks de Japón</h3>
+
+              <p style="color: #efe5d5">Sabores para salir de la rutina.</p>
+            </a>
+
+            <a href="#tienda" class="brand-card">
+              <div class="brand-icon">◇</div>
+
+              <h3>Ropa & accesorios</h3>
+
+              <p style="color: #efe5d5">Lleva tus gustos contigo.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- HISTORIA -->
+
+      <section style="background: var(--muted)">
+        <div class="container">
+          <div class="about-grid">
+            <div>
+              <img
+                src="https://i.ibb.co/F4fGSmCB/image.png"
+                alt="Dromen Bogotá"
+                class="about-image"
+              />
+
+              <div class="btn" style="margin-top: -25px; position: relative">
+                Desde 2024 / Bogotá
+              </div>
+            </div>
+
+            <div class="about-text">
+              <span class="section-label"> Hecho por y para fans </span>
+
+              <h2>
+                Traemos <span class="text-cream">todos los mundos</span> que te
+                marcan.
+              </h2>
+
+              <p>
+                Hay historias que se quedan para siempre. Por eso creamos
+                Dromen: un espacio en donde te traemos partes de aquellas
+                historias que te generan emoción.
+              </p>
+
+              <p>
+                Ya sea anime, cine, videojuegos, etc. Un espacio para que puedas
+                revivir tus mundos favoritos todos los días.
+              </p>
+
+              <a href="nosotros.html" class="btn btn-outline">
+                Nuestra historia →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IDENTIDAD -->
+
+      <section style="background: var(--secondary); color: white">
+        <div class="container">
+          <div class="culture-grid">
+            <div>
+              <span class="section-label" style="color: var(--accent-light)">
+                Nuestra identidad
+              </span>
+
+              <h2 class="section-title2">
+                Lo que coleccionas
+                <span class="text-accent">también habla de ti.</span>
+              </h2>
+
+              <p style="margin-top: 20px; color: #ccc">
+                No creemos en colecciones correctas. Creemos en encontrar esa
+                pieza que hace clic y en la gente que entiende por qué.
+              </p>
+
+              <a href="marca.html" class="btn" style="margin-top: 30px">
+                La idea detrás →
+              </a>
+            </div>
+
+            <div class="brand-grid">
+              <div>
+                <span class="section-label">01</span>
+                <h3>Autenticidad</h3>
+                <p>Lo que eliges tiene una historia.</p>
+              </div>
+
+              <div>
+                <span class="section-label">02</span>
+                <h3>Variedad</h3>
+                <p>Tu universo no cabe en una sola categoría.</p>
+              </div>
+
+              <div>
+                <span class="section-label">03</span>
+                <h3>Comunidad</h3>
+                <p>Compartirlo lo hace más grande.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCTOS DESTACADOS -->
+
+      <section>
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> Tu próximo antojo </span>
+
+            <h2 class="section-title">
+              Descubre nuestra <span class="text-accent">colección.</span>
+            </h2>
+          </div>
+
+          <div class="products-grid">
+            <article class="product-card">
+              <img
+                src="https://i.ibb.co/7dscg2DC/8dff547c-4688-4f93-afa6-93254aedbb7b.webp"
+                alt="Figuras One Piece"
+                class="product-image"
+              />
+
+              <div class="product-info">
+                <span class="product-code"> SETS Y FIGURAS LEGO </span>
+
+                <h3 class="product-title">Figuras One Piece</h3>
+
+                <span class="product-category"> DRM / 001 </span>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="https://i.ibb.co/M5gbHR90/naruto-set-figuras.webp"
+                alt="Set de legos Naruto"
+                class="product-image"
+              />
+
+              <div class="product-info">
+                <span class="product-code"> SETS Y FIGURAS LEGO </span>
+
+                <h3 class="product-title">Set de legos Naruto</h3>
+
+                <span class="product-category"> DRM / 002 </span>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="https://i.ibb.co/BVM5RL7q/figura-de-eather.webp"
+                alt="Figura de Aether"
+                class="product-image"
+              />
+
+              <div class="product-info">
+                <span class="product-code"> SETS Y FIGURAS LEGO </span>
+
+                <h3 class="product-title">Figura de Aether</h3>
+
+                <span class="product-category"> DRM / 003 </span>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="https://i.ibb.co/VYsn5jDr/set-figuras-death-note.jpg"
+                alt="Death Note"
+                class="product-image"
+              />
+
+              <div class="product-info">
+                <span class="product-code"> SETS Y FIGURAS LEGO </span>
+
+                <h3 class="product-title">Death Note</h3>
+
+                <span class="product-category"> DRM / 004 </span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+
+      <section style="background: var(--muted)">
+        <div class="container">
+          <div class="newsletter">
+            <div>
+              <span class="section-label"> La señal de Dromen </span>
+
+              <h2>Para cuando tu algoritmo ya no sabe qué mostrarte.</h2>
+            </div>
+
+            <form class="newsletter-form">
+              <input type="email" placeholder="Tu correo electrónico" />
+
+              <button class="btn" type="submit">→</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+       FOOTER
+       ========================= -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <img
+              src="https://i.ibb.co/8DBVQZxs/Adobe-Express-Dromenv2-3-ezgif-com-effects.gif"
+              alt="Dromen"
+              class="logo"
+            />
+
+            <p class="footer-description">
+              Una tienda colombiana para quienes viven la cultura geek,
+              coleccionan historias y quieren compartirlas.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="footer-title">NAVEGA</h3>
+
+            <div class="footer-links">
+              <a href="index.html">Inicio</a>
+              <a href="tienda.html">Tienda</a>
+              <a href="nosotros.html">Nosotros</a>
+              <a href="marca.html">La marca</a>
+              <a href="cultura.html">Cultura</a>
+              <a href="redes.html">Redes</a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-title">ENCUÉNTRANOS</h3>
+
+            <div class="footer-links">
+              <span> 📍 Colombia </span>
+
+              <span> Tienda física Carrera 113#78f-23 </span>
+
+              <span>
+                Lun — Sáb
+                <br />
+                9:00 — 19:00
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-title">INGRESA TU CORREO</h3>
+
+            <p class="footer-description">
+              Para estar al tanto de novedades, hallazgos y convocatorias.
+            </p>
+
+            <form class="newsletter-form" style="margin-top: 20px">
+              <input type="email" placeholder="tu@email.com" />
+
+              <button class="btn">→</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 Dromen / Hecho para coleccionar </span>
+
+          <span style="float: right"> Colecciona. Disfruta. Conecta. </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

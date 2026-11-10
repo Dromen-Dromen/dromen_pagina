@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda | Dromen</title> <!-- cambia por página -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container navbar">
+        <a href="index.html" class="logo-link">
+          <img src="https://i.ibb.co/8DBVQZxs/Adobe-Express-Dromenv2-3-ezgif-com-effects.gif" alt="Dromen" class="logo" />
+        </a>
+
+        <!-- Menú móvil sin JavaScript -->
+        <input type="checkbox" id="menuToggle" class="menu-toggle" />
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="marca.html"  class="active" >La marca</a></li>
+            <li><a href="cultura.html">Cultura</a></li>
+            <li><a href="redes.html">Redes</a></li>
+          </ul>
+        </nav>
+
+        <label for="menuToggle" class="menu-button">☰</label>
+      </div>
+    </header>
+
+    <main>
+    <!-- =========================
+       MARCA
+       ========================= -->
+
+       <section id="marca" style="background: var(--muted)">
+        <div class="container">
+          <span class="section-label"> La marca / tres coordenadas </span>
+  
+          <h1 class="section-title2">
+            Una idea clara:
+            <br />
+            <span class="text-accent"> hacerlo nuestro. </span>
+          </h1>
+  
+          <p class="abaut-text">
+            Dromen toma referencias de todas partes y las reúne aquí, con una
+            mirada colombiana, abierta y sin pedir permiso para entusiasmarse.
+          </p>
+  
+          <div style="margin-top: 60px">
+            <article class="brand-card">
+              <span class="section-label"> 01 / sin atajos </span>
+  
+              <h2 style="font-size: 45px; margin: 25px 0"><span class="text-accent">Autenticidad</span></h2>
+  
+              <p>
+                Lo que llega a Dromen tiene que provocar algo. Buscamos licencias,
+                piezas y sabores que respeten su origen y la emoción detrás de
+                ellos.
+              </p>
+            </article>
+  
+            <article
+              class="brand-card"
+              style="margin-top: 15px; background: var(--primary); color: white"
+            >
+              <span class="section-label"> 02 / mundos cruzados </span>
+  
+              <h2 style="font-size: 45px; margin: 25px 0"><span class="text-purple">Variedad</span></h2>
+  
+              <p style="color: #ccc">
+                Tu colección puede tener una figura, una camiseta, un manga y un
+                paquete de dulces en la misma historia. Esa mezcla nos encanta.
+              </p>
+            </article>
+  
+            <article class="brand-card" style="margin-top: 15px">
+              <span class="section-label"> 03 / compartir es parte </span>
+  
+              <h2 style="font-size: 45px; margin: 25px 0"><span class="text-cream">Comunidad</span></h2>
+  
+              <p>
+                No somos una vitrina distante. Queremos conversar, aprender qué
+                buscas y crear momentos alrededor de lo que nos une.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+        <!-- =========================
+       FOOTER
+       ========================= -->
+
+    <footer>
+        <div class="container">
+          <div class="footer-grid">
+            <div>
+               <img src="https://i.ibb.co/8DBVQZxs/Adobe-Express-Dromenv2-3-ezgif-com-effects.gif" alt="Dromen" class="logo" />
+  
+              <p class="footer-description">
+                Una tienda colombiana para quienes viven la cultura geek,
+                coleccionan historias y quieren compartirlas.
+              </p>
+            </div>
+  
+            <div>
+              <h3 class="footer-title">NAVEGA</h3>
+  
+              <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="tienda.html">Tienda</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="marca.html">La marca</a>
+                <a href="cultura.html">Cultura</a>
+                <a href="redes.html">Redes</a>
+              </div>
+            </div>
+  
+            <div>
+              <h3 class="footer-title">ENCUÉNTRANOS</h3>
+  
+              <div class="footer-links">
+                <span> 📍 Colombia </span>
+  
+                <span> Tienda física Carrera 113#78f-23 </span>
+  
+                <span>
+                  Lun — Sáb
+                  <br />
+                  9:00 — 19:00
+                </span>
+              </div>
+            </div>
+  
+            <div>
+              <h3 class="footer-title">INGRESA TU CORREO</h3>
+  
+              <p class="footer-description">
+                Para estar al tanto de novedades, hallazgos y convocatorias.
+              </p>
+  
+              <form class="newsletter-form" style="margin-top: 20px">
+                <input type="email" placeholder="tu@email.com" />
+  
+                <button class="btn">→</button>
+              </form>
+            </div>
+          </div>
+  
+          <div class="footer-bottom">
+            <span> © 2026 Dromen / Hecho para coleccionar </span>
+  
+            <span style="float: right"> Colecciona. Disfruta. Conecta. </span>
+          </div>
+        </div>
+      </footer>
+  
+      <!-- JavaScript -->
+      <script src="script.js"></script>
+    </body>
+  </html>
+</footer>  
+      <!-- =========================
+       CHAT BOT
+       ========================= -->
+       <script type="module" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs"></script>
+       <script type="module">
+         var myLandbot = new Landbot.Livechat({
+           configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-3544602-EYLBR7ZS52UK5VN0/index.json',
+         });
+       </script>

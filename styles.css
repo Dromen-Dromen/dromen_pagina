@@ -1,0 +1,1488 @@
+/* ================================
+   DROMEN - ESTILOS PRINCIPALES
+   ================================ */
+
+:root {
+  --background: #efe5d5; /*inicio titulo*/
+  --foreground: #1e1636; /*Letras*/
+  --card: #1e1636; /*Abajo de productos*/
+  --card-foreground: #5b3cc4;
+
+  --primary: #f0e9dd; /*botones 1*/
+  --primary-foreground: #1e1636; /*botones 2*/
+
+  --secondary: #1e1636; /*Fondo 1*/
+  --muted: #1e1636; /*Fondo 2*/
+  --muted-foreground: #2a2a2a;
+
+  --accent: #e00022;
+  --accent-light: #e00022;
+  --accent-dark: #e00022;
+
+  --border: #5b3cc4;
+
+  --radius: 12px;
+}
+
+/* ================================
+     RESET
+     ================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ================================
+     CONTENEDOR
+     ================================ */
+
+.container {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* ================================
+     HEADER / NAVBAR
+     ================================ */
+
+header {
+  width: 100%;
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  color: #1e1636;
+}
+
+.nav-links a {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-dark);
+}
+
+.nav-links a.active {
+  color: var(--accent-dark);
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+}
+
+/* Botón menú móvil */
+
+.menu-button {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 26px;
+}
+
+/* ================================
+     BOTONES
+     ================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 44px;
+  padding: 10px 20px;
+
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+
+  background: var(--primary);
+  color: var(--primary-foreground);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.btn:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: #5b3cc4;
+}
+
+/* ================================
+     HERO
+     ================================ */
+
+.hero {
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 0;
+}
+
+.hero-content {
+  max-width: 580px;
+}
+
+.hero-label {
+  display: inline-block;
+  margin-bottom: 18px;
+
+  color: var(--accent-dark);
+
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -3px;
+  margin-bottom: 28px;
+}
+
+.hero h1 span {
+  color: var(--accent-dark);
+}
+
+.hero p {
+  max-width: 500px;
+  color: var(--primary);
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 540px;
+  object-fit: contain;
+}
+
+/* Sección completa del hero (ya no es grid) */
+.hero-section {
+  padding: 0;
+}
+
+/* Columnas: un poco más de espacio para la imagen */
+.hero {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+/* Botones sin apretarse */
+.hero-buttons .btn {
+  white-space: nowrap;
+}
+
+/* Imagen de Mario */
+.img-1 {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: contain;
+}
+
+/* ================================
+     SECCIONES
+     ================================ */
+
+section {
+  padding: 90px 0;
+}
+
+.section-header {
+  margin-bottom: 50px;
+}
+
+.section-label {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  color: var(--muted);
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+.section-title2 {
+  color: var(--background);
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.section-description {
+  max-width: 650px;
+  margin-top: 18px;
+  color: var(--muted-foreground);
+}
+
+/* ================================
+     TARJETAS
+     ================================ */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(30, 25, 20, 0.08);
+}
+
+/* ================================
+     PRODUCTOS
+     ================================ */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  border-radius: var(--radius);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background: #eee9df;
+  padding: 20px;
+}
+
+.product-info {
+  padding: 18px;
+}
+
+.product-code {
+  color: var(--accent-dark);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.product-title {
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+
+.product-category {
+  color: var(--muted-foreground);
+  font-size: 13px;
+}
+
+/* ================================
+     FILTROS DE TIENDA
+     ================================ */
+
+.category-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.category-button {
+  padding: 9px 16px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+
+  background: transparent;
+  color: var(--card);
+
+  font-size: 13px;
+
+  transition: all 0.2s ease;
+}
+
+.category-button:hover,
+.category-button.active {
+  background: var(--accent);
+  color: var(--card);
+  border-color: var(--primary);
+}
+
+/* ================================
+     NOSOTROS
+     ================================ */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-text h2 {
+  color: var(--border);
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+
+.about-text p {
+  color: var(--primary);
+  margin-bottom: 18px;
+}
+
+.about-image {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+/* ================================
+     MARCA
+     ================================ */
+
+.brand-grid {
+  color: var(--accent-dark);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.brand-card {
+  padding: 35px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.brand-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  background: var(--secondary);
+  border-radius: 50%;
+
+  color: var(--accent-dark);
+}
+
+.brand-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.brand-card p {
+  color: var(--muted-foreground);
+  font-size: 14px;
+}
+
+/* ================================
+     CULTURA
+     ================================ */
+
+.culture-section {
+  background: var(--primary);
+  color: white;
+}
+
+.culture-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.culture-section .section-label {
+  color: var(--accent-light);
+}
+
+.culture-section p {
+  color: #d2cdc4;
+}
+
+.quote {
+  padding: 35px;
+  border-left: 3px solid var(--accent);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.quote-text {
+  font-size: 25px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.quote-author {
+  display: block;
+  margin-top: 20px;
+  color: var(--accent-light);
+  font-size: 13px;
+}
+
+/* ================================
+     BLOG
+     ================================ */
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.blog-card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.blog-number {
+  padding: 20px;
+  font-size: 13px;
+  color: var(--accent-dark);
+}
+
+.blog-content {
+  padding: 25px;
+}
+
+.blog-category {
+  font-size: 11px;
+  color: var(--accent-dark);
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.blog-title {
+  margin: 12px 0 15px;
+  font-size: 23px;
+  line-height: 1.2;
+}
+
+.blog-date {
+  color: var(--muted-foreground);
+  font-size: 13px;
+}
+
+/* ================================
+     NEWSLETTER
+     ================================ */
+
+.newsletter {
+  padding: 60px;
+  background: var(--secondary);
+  border-radius: var(--radius);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.newsletter h2 {
+  font-size: 35px;
+}
+
+.newsletter p {
+  color: var(--muted-foreground);
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  width: 250px;
+  height: 44px;
+  padding: 0 15px;
+
+  border: 1px solid var(--border);
+  border-radius: 5px;
+
+  background: white;
+  outline: none;
+}
+
+.newsletter-form input:focus {
+  border-color: var(--accent);
+}
+
+/* ================================
+     FOOTER
+     ================================ */
+
+footer {
+  padding: 60px 0 30px;
+  background: #efe5d5;
+  color: white;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 50px;
+  padding-bottom: 45px;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 18px;
+}
+
+.footer-description {
+  max-width: 350px;
+  color: #7b7b7b;
+  font-size: 14px;
+}
+
+.footer-title {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: var(--accent-light);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: #7b7b7b;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  padding-top: 25px;
+  border-top: 1px solid #3a3732;
+
+  color: #777169;
+  font-size: 12px;
+}
+
+/* ================================
+     SEARCH
+     ================================ */
+
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+}
+
+.search-input {
+  width: 100%;
+  height: 44px;
+
+  padding: 0 15px 0 42px;
+
+  border: 1px solid var(--border);
+  border-radius: 5px;
+
+  background: var(--card);
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: var(--accent);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: var(--muted-foreground);
+}
+
+/* ================================
+     UTILIDADES
+     ================================ */
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.text-accent {
+  color: var(--accent-dark);
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ================================
+     ANIMACIONES
+     ================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: reveal 0.7s ease forwards;
+}
+
+.reveal-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  animation-delay: 0.3s;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+     RESPONSIVE - TABLET
+     ================================ */
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brand-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    max-width: 450px;
+  }
+
+  .about-grid,
+  .culture-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ================================
+     RESPONSIVE - CELULAR
+     ================================ */
+
+@media (max-width: 650px) {
+  .container {
+    width: min(100% - 28px, 1200px);
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .navbar {
+    min-height: 65px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+
+    top: 65px;
+    left: 0;
+    width: 100%;
+
+    padding: 20px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-grid,
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .product-image {
+    height: 280px;
+  }
+
+  .newsletter {
+    padding: 35px 20px;
+  }
+
+  .newsletter h2 {
+    font-size: 28px;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .newsletter-form .btn {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* Menú móvil sin JS */
+.menu-toggle {
+  display: none;
+}
+
+.menu-button {
+  cursor: pointer;
+  color: #1e1636;
+}
+
+@media (max-width: 650px) {
+  .menu-toggle:checked ~ nav .nav-links {
+    display: flex;
+  }
+}
+/* ================================================
+   CORRECCIÓN DE CONTRASTE
+   Fondo crema → letra oscura | Fondo oscuro → letra crema
+   ================================================ */
+
+/* 1. Secciones oscuras (las que llevan el fondo escrito en el HTML) */
+section[style*="--secondary"],
+section[style*="--muted"] {
+  color: var(--primary);
+}
+
+section[style*="--secondary"] .section-title,
+section[style*="--muted"] .section-title,
+section[style*="--secondary"] .section-description,
+section[style*="--muted"] .section-description {
+  color: var(--primary);
+}
+
+/* 2. Cajas oscuras: su texto siempre es crema */
+.product-card,
+.brand-card,
+.newsletter,
+.blog-card {
+  color: var(--primary);
+}
+
+.brand-card p,
+.newsletter p,
+.product-category {
+  color: var(--primary);
+}
+
+.brand-grid {
+  color: inherit;
+}
+
+/* 3. Letras pequeñas rojas sobre oscuro → crema */
+section[style*="--secondary"] .section-label,
+section[style*="--muted"] .section-label,
+.brand-card .section-label,
+.newsletter .section-label,
+.hero-label,
+.product-code {
+  color: var(--primary);
+}
+
+/* 4. Título morado sobre oscuro (sección "Hecho por y para fans") */
+.about-text h2 {
+  color: var(--primary);
+}
+
+/* 5. Tarjeta clara (la del medio en La marca) */
+.brand-card.brand-card-light {
+  background: var(--primary);
+  color: var(--card);
+}
+
+.brand-card.brand-card-light p {
+  color: var(--card);
+}
+
+.brand-card.brand-card-light .section-label {
+  color: var(--accent);
+}
+
+/* 6. Hover de botones y filtros: letra blanca sobre rojo */
+.btn:not(.btn-outline):hover {
+  color: #fff;
+}
+
+.category-button:hover,
+.category-button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* 7. Buscador (fondo oscuro → letra, ícono y placeholder crema) */
+.search-input {
+  color: var(--primary);
+}
+
+.search-input::placeholder {
+  color: var(--primary);
+  opacity: 0.7;
+}
+
+.search-icon {
+  color: var(--primary);
+}
+
+/* 8. Footer (fondo crema → letras oscuras) */
+footer {
+  color: var(--card);
+}
+
+.footer-description,
+.footer-links a,
+.footer-bottom {
+  color: var(--muted-foreground);
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+footer .btn {
+  background: var(--card);
+  color: var(--primary);
+  border-color: var(--card);
+}
+/* ================================================
+   TÍTULOS ROJOS Y DETALLES MORADOS
+   ================================================ */
+
+/* 1. Títulos grandes sobre fondo oscuro → rojo */
+section[style*="--secondary"] .section-title,
+section[style*="--muted"] .section-title,
+.about-text h2,
+.newsletter h2,
+.brand-card h2,
+.brand-card h3,
+section[style*="--secondary"] .brand-grid h3 {
+  color: var(--accent);
+}
+
+/* 2. Excepción: la tarjeta clara de "La marca" mantiene título oscuro */
+.brand-card.brand-card-light h2,
+.brand-card.brand-card-light h3 {
+  color: var(--card);
+}
+
+/* 3. Texto secundario sobre oscuro → gris */
+.product-category {
+  color: #7b7b7b;
+}
+
+/* 4. Detalles morados sobre crema (contraste 5.8:1) */
+.section-label {
+  color: var(--card-foreground);
+}
+
+.category-button {
+  color: var(--card-foreground);
+}
+
+.btn-outline:hover {
+  color: var(--card-foreground);
+}
+
+.quote {
+  border-left-color: var(--card-foreground);
+}
+
+/* 5. Etiquetas pequeñas sobre oscuro: siguen en crema */
+section[style*="--secondary"] .section-label,
+section[style*="--muted"] .section-label,
+.brand-card .section-label,
+.newsletter .section-label {
+  color: var(--primary);
+}
+
+.brand-card.brand-card-light .section-label {
+  color: var(--card-foreground);
+}
+
+/* ================================================
+   PALABRAS DE COLOR DENTRO DE TÍTULOS
+   ================================================ */
+
+.text-accent {
+  color: var(--accent);
+}
+.text-purple {
+  color: var(--card-foreground);
+} /* solo sobre crema o tarjeta clara */
+.text-cream {
+  color: var(--primary);
+} /* solo sobre oscuro */
+
+/* Para que las palabras de color ganen a las reglas anteriores */
+.section-title .text-accent,
+.section-title2 .text-accent,
+.about-text h2 .text-accent,
+.brand-card h2 .text-accent,
+.brand-card h3 .text-accent {
+  color: var(--accent);
+}
+
+.section-title .text-purple,
+.brand-card.brand-card-light h2 .text-purple {
+  color: var(--card-foreground);
+}
+
+.section-title .text-cream,
+.about-text h2 .text-cream,
+.brand-card h2 .text-cream,
+.brand-card h3 .text-cream {
+  color: var(--primary);
+}
+
+/* ================================================
+   FILTROS DE TIENDA SIN JAVASCRIPT
+   ================================================ */
+
+/* Ocultar los radios */
+.shop-filter > input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Los botones ahora son <label> */
+.category-button {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Contadores y mensaje vacío: ocultos por defecto */
+.count,
+.empty-msg {
+  display: none;
+}
+
+.empty-msg {
+  margin: 20px 0 40px;
+  color: var(--card);
+  font-weight: 600;
+}
+
+/* ---------- BOTÓN ACTIVO ---------- */
+#f-todo:checked ~ .category-filters label[for="f-todo"],
+#f-lego:checked ~ .category-filters label[for="f-lego"],
+#f-maletas:checked ~ .category-filters label[for="f-maletas"],
+#f-ropa:checked ~ .category-filters label[for="f-ropa"],
+#f-snacks:checked ~ .category-filters label[for="f-snacks"],
+#f-accesorios:checked ~ .category-filters label[for="f-accesorios"],
+#f-otros:checked ~ .category-filters label[for="f-otros"] {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* ---------- CONTADOR ---------- */
+#f-todo:checked ~ .count-todo,
+#f-lego:checked ~ .count-lego,
+#f-maletas:checked ~ .count-maletas,
+#f-ropa:checked ~ .count-ropa,
+#f-snacks:checked ~ .count-snacks,
+#f-accesorios:checked ~ .count-accesorios,
+#f-otros:checked ~ .count-otros {
+  display: block;
+}
+
+/* ---------- MENSAJE EN CATEGORÍAS VACÍAS ---------- */
+#f-accesorios:checked ~ .empty-msg,
+#f-otros:checked ~ .empty-msg {
+  display: block;
+}
+
+/* ---------- FILTRADO DE PRODUCTOS ---------- */
+#f-lego:checked
+  ~ .products-grid
+  .product-card:not([data-category="Sets y figuras lego"]),
+#f-maletas:checked
+  ~ .products-grid
+  .product-card:not([data-category="Maletas personalizadas"]),
+#f-ropa:checked ~ .products-grid .product-card:not([data-category="Ropa"]),
+#f-snacks:checked ~ .products-grid .product-card:not([data-category="Snacks"]),
+#f-accesorios:checked
+  ~ .products-grid
+  .product-card:not([data-category="Accesorios"]),
+#f-otros:checked ~ .products-grid .product-card:not([data-category="otros"]) {
+  display: none;
+}
+
+/* ================================================
+   FILTRADO DE PRODUCTOS (no depende de la estructura)
+   ================================================ */
+
+body:has(#f-lego:checked)
+  .product-card:not([data-category="Sets y figuras lego"]),
+body:has(#f-maletas:checked)
+  .product-card:not([data-category="Maletas personalizadas"]),
+body:has(#f-ropa:checked) .product-card:not([data-category="Ropa"]),
+body:has(#f-snacks:checked) .product-card:not([data-category="Snacks"]),
+body:has(#f-accesorios:checked) .product-card:not([data-category="Accesorios"]),
+body:has(#f-otros:checked) .product-card:not([data-category="otros"]) {
+  display: none;
+}
+
+/* ================================================
+   BOTONES GUARDAR / AVÍSAME (sin JavaScript)
+   ================================================ */
+
+.toggle {
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Checkbox oculto */
+.toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toggle .btn {
+  width: 100%;
+}
+
+/* Texto: por defecto se ve "off", al seleccionar se ve "on" */
+.toggle .on {
+  display: none;
+}
+
+.toggle input:checked + .btn .off {
+  display: none;
+}
+
+.toggle input:checked + .btn .on {
+  display: inline;
+}
+
+/* Botón iluminado cuando está seleccionado */
+.toggle input:checked + .btn {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(224, 0, 34, 0.55);
+}
+
+/* Accesibilidad: borde visible al navegar con teclado */
+.toggle input:focus-visible + .btn {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ================================================
+   NOSOTROS: TEXTO + IMAGEN AL LADO
+   ================================================ */
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.intro-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+/* Tablet y celular: la imagen pasa debajo del texto */
+@media (max-width: 900px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* ================================================
+   REDES: VIDEO + INFORMACIÓN
+   ================================================ */
+
+.social-list {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Cada fila es una tarjeta oscura: video | info */
+.social-row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 50px;
+  align-items: center;
+  padding: 30px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--primary);
+}
+
+/* Fila invertida: info a la izquierda, video a la derecha */
+.social-row.reverse {
+  grid-template-columns: 1fr 1.3fr;
+}
+
+.social-row.reverse .video-frame {
+  order: 2;
+}
+
+/* ---------- VIDEO ---------- */
+.video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+}
+
+.video-frame iframe,
+.video-frame video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Video vertical (Reels, TikTok, Shorts) */
+.video-frame.vertical {
+  aspect-ratio: 9 / 16;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* Espacio vacío */
+.video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* ---------- INFORMACIÓN ---------- */
+.social-info .section-label {
+  display: block;
+  color: var(--primary);
+}
+
+.social-info h2 {
+  margin: 12px 0 16px;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.1;
+  color: var(--primary);
+}
+
+.social-info p {
+  margin-bottom: 25px;
+  color: var(--primary);
+}
+
+.social-info h2 .text-accent {
+  color: var(--accent);
+}
+.social-info h2 .text-gray {
+  color: #7b7b7b;
+}
+
+/* Estas dos clases ya las tienes; se repiten por si aún no las pegaste */
+.text-gray {
+  color: #7b7b7b;
+}
+
+.mark-purple {
+  background: var(--card-foreground);
+  color: var(--primary);
+  padding: 0 0.25em;
+  border-radius: 6px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* ---------- TABLET Y CELULAR ---------- */
+@media (max-width: 900px) {
+  .social-row,
+  .social-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 20px;
+  }
+
+  .social-row.reverse .video-frame {
+    order: 0;
+  }
+}
+
+.video-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  align-items: start;
+}
+
+.video-card {
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--primary);
+}
+/* ================================================
+   CULTURA: IMAGEN IZQUIERDA + TEXTO DERECHA
+   ================================================ */
+
+.culture-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: stretch; /* la imagen se estira a la altura del texto */
+}
+
+.culture-image {
+  position: relative;
+  min-height: 400px;
+}
+
+.culture-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* llena el espacio sin deformarse */
+  border-radius: var(--radius);
+}
+
+/* Tablet y celular: imagen arriba, texto abajo */
+@media (max-width: 900px) {
+  .culture-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .culture-image {
+    min-height: 320px;
+  }
+}

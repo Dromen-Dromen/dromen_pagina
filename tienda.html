@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda | Dromen</title>
+    <!-- cambia por página -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container navbar">
+        <a href="index.html" class="logo-link">
+          <img
+            src="https://i.ibb.co/8DBVQZxs/Adobe-Express-Dromenv2-3-ezgif-com-effects.gif"
+            alt="Dromen"
+            class="logo"
+          />
+        </a>
+
+        <!-- Menú móvil sin JavaScript -->
+        <input type="checkbox" id="menuToggle" class="menu-toggle" />
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html" class="active">Tienda</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="marca.html">La marca</a></li>
+            <li><a href="cultura.html">Cultura</a></li>
+            <li><a href="redes.html">Redes</a></li>
+          </ul>
+        </nav>
+
+        <label for="menuToggle" class="menu-button">☰</label>
+      </div>
+    </header>
+
+    <main>
+      <!-- =========================
+       TIENDA
+       ========================= -->
+
+      <section id="tienda">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> Dromen / catálogo vivo </span>
+
+            <h1 class="section-title">
+              La vitrina
+              <br />
+              <span class="text-accent"> se está armando. </span>
+            </h1>
+
+            <p class="section-description">
+              Estamos seleccionando piezas, sabores y objetos para que cada
+              hallazgo tenga sentido. Guarda lo que te llame y sé el primero en
+              saber.
+            </p>
+          </div>
+
+          <div class="shop-filter">
+            <!-- Radios ocultos: uno por categoría -->
+            <input type="radio" name="cat" id="f-todo" checked />
+            <input type="radio" name="cat" id="f-lego" />
+            <input type="radio" name="cat" id="f-maletas" />
+            <input type="radio" name="cat" id="f-ropa" />
+            <input type="radio" name="cat" id="f-snacks" />
+            <input type="radio" name="cat" id="f-accesorios" />
+            <input type="radio" name="cat" id="f-otros" />
+
+            <!-- Botones -->
+            <div class="category-filters">
+              <label for="f-todo" class="category-button">Todo</label>
+              <label for="f-lego" class="category-button"
+                >Sets y figuras lego</label
+              >
+              <label for="f-maletas" class="category-button"
+                >Maletas personalizadas</label
+              >
+              <label for="f-ropa" class="category-button">Ropa</label>
+              <label for="f-snacks" class="category-button">Snacks</label>
+              <label for="f-accesorios" class="category-button"
+                >Accesorios</label
+              >
+              <label for="f-otros" class="category-button">Otros</label>
+            </div>
+
+            <!-- Contador: se muestra el que corresponde -->
+            <p class="text-muted count count-todo">16 señales encontradas</p>
+            <p class="text-muted count count-lego">4 señales encontradas</p>
+            <p class="text-muted count count-maletas">4 señales encontradas</p>
+            <p class="text-muted count count-ropa">4 señales encontradas</p>
+            <p class="text-muted count count-snacks">4 señales encontradas</p>
+            <p class="text-muted count count-accesorios">
+              0 señales encontradas
+            </p>
+            <p class="text-muted count count-otros">0 señales encontradas</p>
+
+            <!-- Mensaje para categorías vacías -->
+            <p class="empty-msg">
+              Esta vitrina se está armando. Muy pronto habrá piezas aquí.
+            </p>
+
+            <!-- Aquí va tu <div class="products-grid" id="productsGrid"> con todos los productos -->
+            <div class="products-grid" id="productsGrid">
+              <!-- ONE PIECE -->
+
+              <article
+                class="product-card"
+                data-category="Sets y figuras lego"
+                data-title="Figuras One Piece"
+              >
+                <img
+                  src="https://i.ibb.co/7dscg2DC/8dff547c-4688-4f93-afa6-93254aedbb7b.webp"
+                  class="product-image"
+                  alt="Figuras One Piece"
+                />
+
+                <div class="product-info">
+                  <span class="product-code"> SETS Y FIGURAS LEGO </span>
+
+                  <h3 class="product-title">Figuras One Piece</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <!-- NARUTO -->
+
+              <article
+                class="product-card"
+                data-category="Sets y figuras lego"
+                data-title="Set de legos Naruto"
+              >
+                <img
+                  src="https://i.ibb.co/M5gbHR90/naruto-set-figuras.webp"
+                  class="product-image"
+                  alt="Set de legos Naruto"
+                />
+
+                <div class="product-info">
+                  <span class="product-code"> SETS Y FIGURAS LEGO </span>
+
+                  <h3 class="product-title">Set de legos Naruto</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <!-- AETHER -->
+
+              <article
+                class="product-card"
+                data-category="Sets y figuras lego"
+                data-title="Figura de Aether"
+              >
+                <img
+                  src="https://i.ibb.co/BVM5RL7q/figura-de-eather.webp"
+                  class="product-image"
+                  alt="Figura de Aether"
+                />
+
+                <div class="product-info">
+                  <span class="product-code"> SETS Y FIGURAS LEGO </span>
+
+                  <h3 class="product-title">Figura de Aether</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <!-- DEATH NOTE -->
+
+              <article
+                class="product-card"
+                data-category="Sets y figuras lego"
+                data-title="Death Note"
+              >
+                <img
+                  src="https://i.ibb.co/VYsn5jDr/set-figuras-death-note.jpg"
+                  class="product-image"
+                  alt="Death Note"
+                />
+
+                <div class="product-info">
+                  <span class="product-code"> SETS Y FIGURAS LEGO </span>
+
+                  <h3 class="product-title">Death Note</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <!-- PACMAN -->
+
+              <article
+                class="product-card"
+                data-category="Maletas personalizadas"
+                data-title="Maleta de Pac-man"
+              >
+                <img
+                  src="https://i.ibb.co/JRdJCSzw/pacman.jpg"
+                  class="product-image"
+                  alt="Maleta de Pac-man"
+                />
+
+                <div class="product-info">
+                  <span class="product-code"> MALETAS PERSONALIZADAS </span>
+
+                  <h3 class="product-title">Maleta de Pac-man</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <!-- CINNAMONROLL -->
+
+              <article
+                class="product-card"
+                data-category="Maletas personalizadas"
+                data-title="Maleta de Cinnamonroll"
+              >
+                <img
+                  src="https://i.ibb.co/27Z4z05F/D-NQ-NP-603999-MCO73531014403-122023-O.webp"
+                  class="product-image"
+                  alt="Maleta de Cinnamonroll"
+                />
+
+                <div class="product-info">
+                  <span class="product-code"> MALETAS PERSONALIZADAS </span>
+
+                  <h3 class="product-title">Maleta de Cinnamonroll</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <!-- JACK -->
+
+              <article
+                class="product-card"
+                data-category="Maletas personalizadas"
+                data-title="Maleta de Jack"
+              >
+                <img
+                  src="https://i.ibb.co/PGpvpqdn/images.jpg"
+                  class="product-image"
+                  alt="Maleta de Jack"
+                />
+
+                <div class="product-info">
+                  <span class="product-code"> MALETAS PERSONALIZADAS </span>
+
+                  <h3 class="product-title">Maleta de Jack</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <!-- MINECRAFT -->
+
+              <article
+                class="product-card"
+                data-category="Maletas personalizadas"
+                data-title="Maleta de Minecraft"
+              >
+                <img
+                  src="https://i.ibb.co/PGj4Xg25/images-1.jpg"
+                  class="product-image"
+                  alt="Maleta de Minecraft"
+                />
+
+                <div class="product-info">
+                  <span class="product-code"> MALETAS PERSONALIZADAS </span>
+
+                  <h3 class="product-title">Maleta de Minecraft</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <!-- ROPA -->
+
+              <article
+                class="product-card"
+                data-category="Ropa"
+                data-title="Camiseta Jujutsu Kaisen"
+              >
+                <img
+                  src="https://i.ibb.co/bRbGFzp2/images-2.jpg"
+                  class="product-image"
+                  alt="Camiseta Jujutsu Kaisen"
+                />
+
+                <div class="product-info">
+                  <span class="product-code">ROPA</span>
+
+                  <h3 class="product-title">Camiseta Jujutsu Kaisen</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-category="Ropa"
+                data-title="Cosplay Shinobu"
+              >
+                <img
+                  src="https://i.ibb.co/WWJ3rnFR/66fa1f2b32e3e8504d193992-demon-slayer-kimetsu-no-yaiba-kochou.jpg"
+                  class="product-image"
+                  alt="Cosplay Shinobu"
+                />
+
+                <div class="product-info">
+                  <span class="product-code">ROPA</span>
+
+                  <h3 class="product-title">Cosplay Shinobu</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-category="Ropa"
+                data-title="Pijama de los Avengers"
+              >
+                <img
+                  src="https://i.ibb.co/PvgMv2mR/916-Sdy-Fa-Wy-L-AC-UY1000.jpg"
+                  class="product-image"
+                  alt="Pijama de los Avengers"
+                />
+
+                <div class="product-info">
+                  <span class="product-code">ROPA</span>
+
+                  <h3 class="product-title">Pijama de los Avengers</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-category="Ropa"
+                data-title="Pantuflas de Anya"
+              >
+                <img
+                  src="https://i.ibb.co/d03kLNrx/images-3.jpg"
+                  class="product-image"
+                  alt="Pantuflas de Anya"
+                />
+
+                <div class="product-info">
+                  <span class="product-code">ROPA</span>
+
+                  <h3 class="product-title">Pantuflas de Anya</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <!-- SNACKS -->
+
+              <article
+                class="product-card"
+                data-category="Snacks"
+                data-title="Onigiris"
+              >
+                <img
+                  src="https://i.ibb.co/G3J5YSJz/images-4.jpg"
+                  class="product-image"
+                  alt="Onigiris"
+                />
+
+                <div class="product-info">
+                  <span class="product-code">SNACKS</span>
+
+                  <h3 class="product-title">Onigiris</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-category="Snacks"
+                data-title="Papas de camarón"
+              >
+                <img
+                  src="https://i.ibb.co/wZHm0sbL/Whats-App-Image-2026-01-07-at-8-40-29-AM.jpg"
+                  class="product-image"
+                  alt="Papas de camarón"
+                />
+
+                <div class="product-info">
+                  <span class="product-code">SNACKS</span>
+
+                  <h3 class="product-title">Papas de camarón</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-category="Snacks"
+                data-title="Pockys"
+              >
+                <img
+                  src="https://i.ibb.co/rfmkHKcf/images-5.jpg"
+                  class="product-image"
+                  alt="Pockys"
+                />
+
+                <div class="product-info">
+                  <span class="product-code">SNACKS</span>
+
+                  <h3 class="product-title">Pockys</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+
+              <article
+                class="product-card"
+                data-category="Snacks"
+                data-title="Ramen picante"
+              >
+                <img
+                  src="https://i.ibb.co/XxmNqHDH/71-OUGRl0-V3-L-AC-UF894-1000-QL80.jpg"
+                  class="product-image"
+                  alt="Ramen picante"
+                />
+
+                <div class="product-info">
+                  <span class="product-code">SNACKS</span>
+
+                  <h3 class="product-title">Ramen picante</h3>
+
+                  <p class="product-category">Ficha y precio por revelar</p>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn btn-outline">
+                      <span class="off">♡ Guardar pieza</span>
+                      <span class="on">♥ Guardada</span>
+                    </span>
+                  </label>
+
+                  <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="btn">
+                      <span class="off">🔔 Avísame cuando llegue</span>
+                      <span class="on">🔔 ¡Te avisaremos!</span>
+                    </span>
+                  </label>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+       FOOTER
+       ========================= -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <img
+              src="https://i.ibb.co/8DBVQZxs/Adobe-Express-Dromenv2-3-ezgif-com-effects.gif"
+              alt="Dromen"
+              class="logo"
+            />
+
+            <p class="footer-description">
+              Una tienda colombiana para quienes viven la cultura geek,
+              coleccionan historias y quieren compartirlas.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="footer-title">NAVEGA</h3>
+
+            <div class="footer-links">
+              <a href="index.html">Inicio</a>
+              <a href="tienda.html">Tienda</a>
+              <a href="nosotros.html">Nosotros</a>
+              <a href="marca.html">La marca</a>
+              <a href="cultura.html">Cultura</a>
+              <a href="redes.html">Redes</a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-title">ENCUÉNTRANOS</h3>
+
+            <div class="footer-links">
+              <span> 📍 Colombia </span>
+
+              <span> Tienda física Carrera 113#78f-23 </span>
+
+              <span>
+                Lun — Sáb
+                <br />
+                9:00 — 19:00
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-title">INGRESA TU CORREO</h3>
+
+            <p class="footer-description">
+              Para estar al tanto de novedades, hallazgos y convocatorias.
+            </p>
+
+            <form class="newsletter-form" style="margin-top: 20px">
+              <input type="email" placeholder="tu@email.com" />
+
+              <button class="btn">→</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 Dromen / Hecho para coleccionar </span>
+
+          <span style="float: right"> Colecciona. Disfruta. Conecta. </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
+<!-- =========================
+       CHAT BOT
+       ========================= -->
+<script
+  type="module"
+  src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs"
+></script>
+<script type="module">
+  var myLandbot = new Landbot.Livechat({
+    configUrl:
+      "https://storage.googleapis.com/landbot.online/v3/H-3544602-EYLBR7ZS52UK5VN0/index.json",
+  });
+</script>
